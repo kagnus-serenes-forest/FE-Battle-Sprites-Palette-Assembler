@@ -27,6 +27,11 @@ or to export the compressed palette to the clipboard.
 Versions:
 ---------
 
+v2.0.0.1: Rebuilt from v2.0
+- Previous build machine had a 32 bits CPU, and ran Windows 7
+- Current one has a 64 bits CPU, and runs Windows 8.1
+- Changed build configuration to "Any CPU"
+
 v2.0: Second release: // need a better name
 - Palette entry choice
 - Palette length checking
