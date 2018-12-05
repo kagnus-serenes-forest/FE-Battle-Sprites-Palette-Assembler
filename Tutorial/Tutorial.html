@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FE BSPalette Assembler Tutorial</title>
+    <meta name="description" content="FE BSPalette Assembler Tutorial">
+    <meta name="author" content="Kagnus">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+  </head>
+  <body>
+    <h1 class="main_title">FE BSPalette Assembler Tutorial</h1>
+	<p>If you want to skip the introduction and go directly to the actual tutorial, <a href="#Tuto">click here</a>.</p>
+	<h2 class="introduction">Introduction</h2>
+	<h3>What is FE BSPalette Assembler ?</h3>
+	<p>
+	FE BSPalette Assembler is a ROM hacking tool that is meant to be used with BwdYeti's FE Recolor.<br />
+	It was created to make battle sprite palette editing easier, especially for editing enemy and NPC palettes.<br />
+	It allows you to put together your different alegiance palettes into one single compressed palette.
+	</p>
+	<h3>What do I need to use it ?</h3>
+	<p>
+	You will need .NET 4.0 or higher (Windows).<br />
+	I haven't tested FE BSPalette Assembler nor FE Recolor on any other OS, so I don't know if it will work.
+	</p>
+	<h2 id="Tuto">How to use FE BSPalette Assembler.</h2>
+	<!--
+	<p>
+	<img src="images/.png" alt="" title="[explain]" />
+	</p>
+	-->
+	<p>
+	First of all, open FE Recolor, load the image you want to edit.<br />
+	In my case, this is the Knight Lord :<br />
+	<img src="images/FE_Recolor_original_palette.png" alt="This is Eliwood's unedited Knight Lord palette" title="" />
+	</p>
+	<p>
+	Then, edit it :<br />
+	<img src="images/FE_Recolor_edited_palette.png" alt="This is an edited Knight Lord palette" title="" /><br />
+	<!--As you can see, I used 2 nice features offered by FE Recolor: the multiple palettes and the image data.<br />-->
+	As you can see, I used 
+	I strongly recommend you use it as it'll save you valuable time.
+	</p>
+	<p>
+	Now, it's time to <img src="images/CopyHexToClipboard.png" alt="copy hex to clipboard" title="" /> and to start using FE BSPalette Assembler.
+	</p>
+	<p>
+	This is how it looks when you launch it:<br />
+	<img src="images/PaletteAssembler.png" alt="FE BSPalette Assembler" title="" /><br />
+	<!--
+	I hope the user interface is intuitive enough, but I know that <span class="neologism">intuitivity</span> is subjective.<br />
+	-->
+	Now, click <img src="images/ImportFromClipboard.png" alt="import from clipboard" title="" /> and :<br />
+	<img src="images/ImportedPalette.png" alt="Imported palette" title="" /><br />
+	Please note that you can't edit the colors since that's FE Recolor's job.
+	</p>
+	<p>
+	Now, you have 2 choices:<br />
+	<ul>
+	<li>
+	You can compress the palette and export it to the clipboard by clicking "Compress to clipboard" :<br />
+	<img src="images/CompressToClipboard.png" alt="compress to clipboard" title="" />
+	</li>
+	<li>
+	Or you can directly insert the compressed palette into your ROM<br />
+	(at your own risk, since it doesn't check if the new compressed palette is bigger than the previous one) :<br />
+	<img src="images/CompressToFile.png" alt="compress to file" title="" />
+	</li>
+	</ul>
+	</p>
+	<p>
+	Let's see how it looks in game :<br />
+	<img src="images/InGamePalette1.png" alt="in game 1" title="" />
+	<img src="images/InGamePalette2.png" alt="in game 2" title="" /><br />
+	<img src="images/InGamePalette3.png" alt="in game 3" title="" />
+	<img src="images/InGamePalette4.png" alt="in game 4" title="" />
+	</p>
+	<!--
+	<p>
+	<ul id="TODO">
+	TODO:
+	  <li class="TODO_not_done">
+	    Finish the tutorial.
+	  </li>
+	  <li class="TODO_not_done">
+	    Make more screenshots.
+	  </li>
+	  <li class="TODO_done">
+	    Add transparency to current screenshots.
+	  </li>
+	  <li class="TODO_not_done">
+	    Add some css.
+	  </li>
+	</ul>
+	</p>
+	-->
+  </body>
+</html>

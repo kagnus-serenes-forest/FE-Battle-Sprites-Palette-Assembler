@@ -1,0 +1,79 @@
+/*
+** [balise|.class|#id] {
+**	color: black;
+**	background-color: white; or #FFFFFF or rgb(255,255,255) or rgba(255,255,255,1)
+**	background-image: url("");
+**	background-attachment: [fixed|scroll]; defaults to scroll
+**	background-repeat: [no-repeat|repeat-x|repeat-y|repeat]; defaults to repeat
+**	background-position: [top|...|??px] [right|...|??px];
+**	_ combination _
+**	background: url("") fixed no-repeat;
+**
+**	font-size: 1.0em;
+**	\/\* 1.0 == 100%; 0.8 == 80%; 1.3 == 130% \*\/
+**
+**	font-family: [polices], sans-serif, serif;
+**	font-style: [italic|oblique|normal];
+**	font-weight: [bold|normal];
+**	text-decoration: [underline|line-through|overline|blink|none];
+**
+**	text-align: [left|right|center|justify];
+**	\/\* block only \*\/
+**
+**	float: [left|right];
+**	\/\* put the element before the text in the html to make it work \*\/
+**	clear: [left|right|both];
+**	\/\* unset float \*\/
+** }
+** 
+*/
+
+/*
+http://www.siteduzero.com/informatique/tutoriels/apprenez-a-creer-votre-site-web-avec-html5-et-css3/formatage-du-texte
+***********************************************************************************************************************
+http://www.siteduzero.com/informatique/tutoriels/apprenez-a-creer-votre-site-web-avec-html5-et-css3/memento-3
+*/
+
+body {
+	/*
+	background: rgb(152,192,152);
+	border: 2px black dotted;
+	*/
+}
+
+.reverse {
+	background-color: black;
+	color: white;
+}
+
+h1,h2,h3 {
+	color: rgb(40,96,88);
+	text-decoration: underline;
+	text-align: center;
+}
+
+p,ul {
+	margin-left: 20%;
+	margin-right: 20%;
+	color: rgb(64,64,104);
+}
+
+.main_title {
+	font-size: 2.5em;
+	color: rgb(32,24,112);
+}
+
+.introduction {
+	font-style: italic;
+}
+
+#TODO {
+	background-color: black;
+	color: white;
+	visibility: hidden;
+}
+
+.TODO_done {
+	text-decoration: line-through;
+}
+

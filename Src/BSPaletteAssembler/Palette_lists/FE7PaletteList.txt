@@ -1,0 +1,257 @@
+##FE7
+0x00 - Don't edit: Default Generic Colours
+0x01 - Lyn unpromoted
+0x02 - Rebecca unpromoted (Archer)
+0x03 - Wil unpromoted (Archer)
+0x04 - Boies (Knight)
+0x05 - Bool (Knight)
+0x06 - Bauker (Knight)
+0x07 - Eagler (Paladin)
+0x08 - Oswin unpromoted (Knight)
+0x09 - Wallace unpromoted (Knight)
+0x0A - Wire (Knight)
+0x0B - Yogi (Knight)
+0x0C - Jaffar (Assassin)
+0x0D - Jerme (Assassin)
+0x0E - Legault promoted (Assassin)
+0x0F - Matthew promoted (Assassin)
+0x10 - Batta (Bandit)
+0x11 - Bug (Bandit)
+0x12 - Carjiga (Bandit)
+0x13 - Migal (Bandit)
+0x14 - Zagan (Bandit)
+0x15 - Zugu (Bandit)
+0x16 - Hawkeye
+0x17 - Serra promoted (Bishop)
+0x18 - Kenneth (Bishop)
+0x19 - Renault (Bishop)
+0x1A - Lucius promoted (Bishop)
+0x1B - Lyn promoted
+0x1C - Harken (Hero)
+0x1D - Kaim (Hero)
+0x1E - Raven promoted (Hero)
+0x1F - Linus (Hero)
+0x20 - Nils
+0x21 - Dart promoted (Berserker)
+0x22 - Fargus (Berserker)
+0x23 - Georg (Berserker)
+0x24 - Ninian
+0x25 - Heath unpromoted (Wyvern Rider)
+0x26 - Heath promoted (Wyvern Lord)
+0x27 - Vaida (Wyvern Lord)
+0x28 - Nergal
+0x29 - Canas promoted ( Druid)
+0x2A - Teodor ( Druid)
+0x2B - Eliwood unpromoted
+0x2C - Farina promoted (FalcoKnight)
+0x2D - Fiora promoted (FalcoKnight)
+0x2E - Florina promoted (FalcoKnight)
+0x2F - Bartre unpromoted (Fighter)
+0x30 - Dorcas unpromoted (Fighter)
+0x31 - Bernard (General)
+0x32 - Darin (General)
+0x33 - Oswin promoted (General)
+0x34 - Wallace promoted (General)
+0x35 - Lundgren (General)
+0x36 - Hector promoted
+0x37 - Hector unpromoted
+0x38 - Eliwood promoted
+0x39 - Nino unpromoted (Mage)
+0x3A - Erk unpromoted (Mage)
+0x3B - Beyard (Mercenary)
+0x3C - Glass (Mercenary)
+0x3D - Raven unpromoted (Mercenary)
+0x3E - Puzon (Mercenary)
+0x3F - Lucius unpromoted (Monk)
+0x40 - Guy unpromoted (Myrmydon)
+0x41 - Rath unpromoted (Nomad)
+0x42 - Sealen (Nomad)
+0x43 - Rath promoted (Nomad Trooper)
+0x44 - Uhai (Nomad Trooper)
+0x45 - Isadora (Paladin)
+0x46 - Cameron (Paladin)
+0x47 - Damian (Paladin)
+0x48 - Eubans (Paladin)
+0x49 - Kent promoted (Paladin)
+0x4A - Lowen promoted (Paladin)
+0x4B - Marcus (Paladin)
+0x4C - Maxime (Paladin)
+0x4D - Pascal (Paladin)
+0x4E - Sain promoted (Paladin)
+0x4F - Farina unpromoted (Pegasus Knight)
+0x50 - Fiora unpromoted (Pegasus Knight)
+0x51 - Florina unpromoted (Pegasus Knight)
+0x52 - Dart unpromoted (Pirate)
+0x53 - Serra unpromoted (Cleric)
+0x54 - Limstella (Sage)
+0x55 - Nino promoted (Sage)
+0x56 - Sonia (Sage)
+0x57 - Aion (Sage)
+0x58 - Erk promoted (Sage)
+0x59 - Pent (Sage)
+0x5A - Canas unpromoted (Shaman)
+0x5B - Heintz (Shaman)
+0x5C - Zoldam (Shaman)
+0x5D - Louise (Sniper)
+0x5E - Rebecca promoted (Sniper)
+0x5F - Denning (Sniper)
+0x60 - Wil promoted (Sniper)
+0x61 - Erik (Social Knight)
+0x62 - Kent unpromoted (Social Knight)
+0x63 - Lowen unpromoted (Social Knight)
+0x64 - Sain unpromoted (Social Knight)
+0x65 - Athos
+0x66 - Karla (Swordmaster)
+0x67 - Guy promoted (Swordmaster)
+0x68 - Karel promoted (Swordmaster)
+0x69 - Lloyd (Swordmaster)
+0x6A - Leila (Thief)
+0x6B - Legault unpromoted (Thief)
+0x6C - Matthew unpromoted (Thief)
+0x6D - Priscilla unpromoted (Troubadour)
+0x6E - Priscilla promoted (Valkyrie)
+0x6F - Ursula (Valkyrie)
+0x70 - Bartre promoted (Warrior)
+0x71 - Brendan (Warrior)
+0x72 - Dorcas promoted (Warrior)
+0x73 - Geitz promoted (Warrior)
+0x74 - Jasmine (Warrior)
+0x75 - Oleg (Warrior)
+0x76 - Paul (Warrior)
+0x77 - Kishuna
+0x78 - Groznyi (Bandit)
+0x79 - New Custom Palette?
+0x7A - New Custom Palette?
+0x7B - New Custom Palette?
+0x7C - New Custom Palette?
+0x7D - New Custom Palette?
+0x7E - New Custom Palette?
+0x7F - New Custom Palette?
+0x80 - New Custom Palette?
+0x81 - New Custom Palette?
+0x82 - New Custom Palette?
+0x83 - New Custom Palette?
+0x84 - New Custom Palette?
+0x85 - New Custom Palette?
+0x86 - New Custom Palette?
+0x87 - New Custom Palette?
+0x88 - New Custom Palette?
+0x89 - New Custom Palette?
+0x8A - New Custom Palette?
+0x8B - New Custom Palette?
+0x8C - New Custom Palette?
+0x8D - New Custom Palette?
+0x8E - New Custom Palette?
+0x8F - New Custom Palette?
+0x90 - New Custom Palette?
+0x91 - New Custom Palette?
+0x92 - New Custom Palette?
+0x93 - New Custom Palette?
+0x94 - New Custom Palette?
+0x95 - New Custom Palette?
+0x96 - New Custom Palette?
+0x97 - New Custom Palette?
+0x98 - New Custom Palette?
+0x99 - New Custom Palette?
+0x9A - New Custom Palette?
+0x9B - New Custom Palette?
+0x9C - New Custom Palette?
+0x9D - New Custom Palette?
+0x9E - New Custom Palette?
+0x9F - New Custom Palette?
+0xA0 - New Custom Palette?
+0xA1 - New Custom Palette?
+0xA2 - New Custom Palette?
+0xA3 - New Custom Palette?
+0xA4 - New Custom Palette?
+0xA5 - New Custom Palette?
+0xA6 - New Custom Palette?
+0xA7 - New Custom Palette?
+0xA8 - New Custom Palette?
+0xA9 - New Custom Palette?
+0xAA - New Custom Palette?
+0xAB - New Custom Palette?
+0xAC - New Custom Palette?
+0xAD - New Custom Palette?
+0xAE - New Custom Palette?
+0xAF - New Custom Palette?
+0xB0 - New Custom Palette?
+0xB1 - New Custom Palette?
+0xB2 - New Custom Palette?
+0xB3 - New Custom Palette?
+0xB4 - New Custom Palette?
+0xB5 - New Custom Palette?
+0xB6 - New Custom Palette?
+0xB7 - New Custom Palette?
+0xB8 - New Custom Palette?
+0xB9 - New Custom Palette?
+0xBA - New Custom Palette?
+0xBB - New Custom Palette?
+0xBC - New Custom Palette?
+0xBD - New Custom Palette?
+0xBE - New Custom Palette?
+0xBF - New Custom Palette?
+0xC0 - New Custom Palette?
+0xC1 - New Custom Palette?
+0xC2 - New Custom Palette?
+0xC3 - New Custom Palette?
+0xC4 - New Custom Palette?
+0xC5 - New Custom Palette?
+0xC6 - New Custom Palette?
+0xC7 - New Custom Palette?
+0xC8 - New Custom Palette?
+0xC9 - New Custom Palette?
+0xCA - New Custom Palette?
+0xCB - New Custom Palette?
+0xCC - New Custom Palette?
+0xCD - New Custom Palette?
+0xCE - New Custom Palette?
+0xCF - New Custom Palette?
+0xD0 - New Custom Palette?
+0xD1 - New Custom Palette?
+0xD2 - New Custom Palette?
+0xD3 - New Custom Palette?
+0xD4 - New Custom Palette?
+0xD5 - New Custom Palette?
+0xD6 - New Custom Palette?
+0xD7 - New Custom Palette?
+0xD8 - New Custom Palette?
+0xD9 - New Custom Palette?
+0xDA - New Custom Palette?
+0xDB - New Custom Palette?
+0xDC - New Custom Palette?
+0xDD - New Custom Palette?
+0xDE - New Custom Palette?
+0xDF - New Custom Palette?
+0xE0 - New Custom Palette?
+0xE1 - New Custom Palette?
+0xE2 - New Custom Palette?
+0xE3 - New Custom Palette?
+0xE4 - New Custom Palette?
+0xE5 - New Custom Palette?
+0xE6 - New Custom Palette?
+0xE7 - New Custom Palette?
+0xE8 - New Custom Palette?
+0xE9 - New Custom Palette?
+0xEA - New Custom Palette?
+0xEB - New Custom Palette?
+0xEC - New Custom Palette?
+0xED - New Custom Palette?
+0xEE - New Custom Palette?
+0xEF - New Custom Palette?
+0xF0 - New Custom Palette?
+0xF1 - New Custom Palette?
+0xF2 - New Custom Palette?
+0xF3 - New Custom Palette?
+0xF4 - New Custom Palette?
+0xF5 - New Custom Palette?
+0xF6 - New Custom Palette?
+0xF7 - New Custom Palette?
+0xF8 - New Custom Palette?
+0xF9 - New Custom Palette?
+0xFA - New Custom Palette?
+0xFB - New Custom Palette?
+0xFC - New Custom Palette?
+0xFD - New Custom Palette?
+0xFE - New Custom Palette?
+0xFF - New Custom Palette?
