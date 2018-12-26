@@ -24,7 +24,7 @@ namespace BSPaletteAssembler
             };
 
             // Loads custom profiles
-            foreach (String filename in Directory.GetFiles(Application.StartupPath + Path.DirectorySeparatorChar + "Profiles", "*.txt"))
+            foreach (string filename in Directory.GetFiles(Application.StartupPath + Path.DirectorySeparatorChar + "Profiles", "*.txt"))
             {
                 try
                 {
