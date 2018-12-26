@@ -9,7 +9,7 @@ namespace BSPaletteAssembler
     // Plan for next release
     public class GameProfile
     {
-        private static readonly Dictionary<String, int> DefaultPalettePtrTableDictionary = new Dictionary<string, int>
+        private static readonly Dictionary<string, int> DefaultPalettePtrTableDictionary = new Dictionary<string, int>
         {
             {"FE6", 0x7FC004},
             {"FE7", 0xFD8004},
@@ -24,13 +24,13 @@ namespace BSPaletteAssembler
             private set;
         }
 
-        public List<String> PaletteEntriesList
+        public List<string> PaletteEntriesList
         {
             get;
             private set;
         }
 
-        public String BaseGame
+        public string BaseGame
         {
             get;
             private set;
@@ -40,7 +40,7 @@ namespace BSPaletteAssembler
 
         #region Ctor
         
-        public GameProfile(String file)
+        public GameProfile(string file)
         {
             ReadProfile(file);
         }
@@ -54,7 +54,7 @@ namespace BSPaletteAssembler
         public void Check()
         {
             var hasError = false;
-            String errorStr = null;
+            string errorStr = null;
 
             if (PaletteEntriesList.Empty())
             {
@@ -64,7 +64,7 @@ namespace BSPaletteAssembler
 
             if (BaseGame == null)
             {
-                if (String.IsNullOrEmpty(errorStr))
+                if (string.IsNullOrEmpty(errorStr))
                 {
                     errorStr = "Base game not set";
                     hasError = true;
@@ -77,7 +77,7 @@ namespace BSPaletteAssembler
 
             if (PaletteTableOffset == 0)
             {
-                if (String.IsNullOrEmpty(errorStr))
+                if (string.IsNullOrEmpty(errorStr))
                 {
                     errorStr = "Can't get palette table offset";
                     hasError = true;
@@ -97,15 +97,15 @@ namespace BSPaletteAssembler
         #endregion
         #region Private Methods
 
-        private void ReadProfile(String file)
+        private void ReadProfile(string file)
         {
             try
             {
                 var lines = File.ReadAllLines(file);
-                PaletteEntriesList = new List<String>();
+                PaletteEntriesList = new List<string>();
                 PaletteTableOffset = 0;
                 BaseGame = null;
-                foreach (String line in lines)
+                foreach (string line in lines)
                 {
                     if (line.Trim().StartsWith("##FE"))
                     {

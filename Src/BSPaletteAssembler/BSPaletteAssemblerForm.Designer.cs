@@ -31,10 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BSPaletteAssemblerForm));
             this.PalettesTabControl = new System.Windows.Forms.TabControl();
             this.PlayerPaletteTab = new System.Windows.Forms.TabPage();
+            this.PlayerPaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
             this.EnemyPaletteTab = new System.Windows.Forms.TabPage();
+            this.EnemyPaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
             this.NPCPaletteTab = new System.Windows.Forms.TabPage();
+            this.NPCPaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
             this.Player4PaletteTab = new System.Windows.Forms.TabPage();
+            this.Player4PaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
             this.Player1PaletteTab = new System.Windows.Forms.TabPage();
+            this.Player1PaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
             this.ClipboardImporter = new System.Windows.Forms.Button();
             this.ClipboardExporter = new System.Windows.Forms.Button();
             this.FileSaver = new System.Windows.Forms.Button();
@@ -49,6 +54,7 @@
             this.PathTextBox = new System.Windows.Forms.TextBox();
             this.extractEntryButton = new System.Windows.Forms.Button();
             this.ClipboardGroupBox = new System.Windows.Forms.GroupBox();
+            this.exportExtractedIndexButton = new System.Windows.Forms.Button();
             this.ResetGroupBox = new System.Windows.Forms.GroupBox();
             this.defaultPaletteBox = new System.Windows.Forms.GroupBox();
             this.currentDefaultPaletteNameLabel = new System.Windows.Forms.Label();
@@ -67,20 +73,14 @@
             this.ExtractedTab = new System.Windows.Forms.TabPage();
             this.extractedPaletteTabControl = new System.Windows.Forms.TabControl();
             this.extractedPlayerTab = new System.Windows.Forms.TabPage();
-            this.extractedEnemyTab = new System.Windows.Forms.TabPage();
-            this.extractedNpcTab = new System.Windows.Forms.TabPage();
-            this.extractedPlayer4LATab = new System.Windows.Forms.TabPage();
-            this.extractedPlayer1LATab = new System.Windows.Forms.TabPage();
-            this.exportExtractedIndexButton = new System.Windows.Forms.Button();
-            this.PlayerPaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
-            this.EnemyPaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
-            this.NPCPaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
-            this.Player4PaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
-            this.Player1PaletteVisualizer = new BSPaletteAssembler.BSPaletteVisualizer();
             this.extractedPlayerVisu = new BSPaletteAssembler.BSPaletteVisualizer();
+            this.extractedEnemyTab = new System.Windows.Forms.TabPage();
             this.extractedEnemyVisu = new BSPaletteAssembler.BSPaletteVisualizer();
+            this.extractedNpcTab = new System.Windows.Forms.TabPage();
             this.extractedNpcVisu = new BSPaletteAssembler.BSPaletteVisualizer();
+            this.extractedPlayer4LATab = new System.Windows.Forms.TabPage();
             this.extractedPlayer4LAVisu = new BSPaletteAssembler.BSPaletteVisualizer();
+            this.extractedPlayer1LATab = new System.Windows.Forms.TabPage();
             this.extractedPlayer1LAVisu = new BSPaletteAssembler.BSPaletteVisualizer();
             this.PalettesTabControl.SuspendLayout();
             this.PlayerPaletteTab.SuspendLayout();
@@ -131,6 +131,15 @@
             this.PlayerPaletteTab.Text = "Player";
             this.PlayerPaletteTab.UseVisualStyleBackColor = true;
             // 
+            // PlayerPaletteVisualizer
+            // 
+            this.PlayerPaletteVisualizer.ColorsLoaded = false;
+            this.PlayerPaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PlayerPaletteVisualizer.Location = new System.Drawing.Point(3, 3);
+            this.PlayerPaletteVisualizer.Name = "PlayerPaletteVisualizer";
+            this.PlayerPaletteVisualizer.Size = new System.Drawing.Size(566, 99);
+            this.PlayerPaletteVisualizer.TabIndex = 0;
+            // 
             // EnemyPaletteTab
             // 
             this.EnemyPaletteTab.Controls.Add(this.EnemyPaletteVisualizer);
@@ -141,6 +150,15 @@
             this.EnemyPaletteTab.TabIndex = 1;
             this.EnemyPaletteTab.Text = "Enemy";
             this.EnemyPaletteTab.UseVisualStyleBackColor = true;
+            // 
+            // EnemyPaletteVisualizer
+            // 
+            this.EnemyPaletteVisualizer.ColorsLoaded = false;
+            this.EnemyPaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EnemyPaletteVisualizer.Location = new System.Drawing.Point(3, 3);
+            this.EnemyPaletteVisualizer.Name = "EnemyPaletteVisualizer";
+            this.EnemyPaletteVisualizer.Size = new System.Drawing.Size(566, 99);
+            this.EnemyPaletteVisualizer.TabIndex = 0;
             // 
             // NPCPaletteTab
             // 
@@ -153,6 +171,15 @@
             this.NPCPaletteTab.Text = "NPC";
             this.NPCPaletteTab.UseVisualStyleBackColor = true;
             // 
+            // NPCPaletteVisualizer
+            // 
+            this.NPCPaletteVisualizer.ColorsLoaded = false;
+            this.NPCPaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NPCPaletteVisualizer.Location = new System.Drawing.Point(3, 3);
+            this.NPCPaletteVisualizer.Name = "NPCPaletteVisualizer";
+            this.NPCPaletteVisualizer.Size = new System.Drawing.Size(566, 99);
+            this.NPCPaletteVisualizer.TabIndex = 0;
+            // 
             // Player4PaletteTab
             // 
             this.Player4PaletteTab.Controls.Add(this.Player4PaletteVisualizer);
@@ -164,6 +191,15 @@
             this.Player4PaletteTab.Text = "Player4 link arena";
             this.Player4PaletteTab.UseVisualStyleBackColor = true;
             // 
+            // Player4PaletteVisualizer
+            // 
+            this.Player4PaletteVisualizer.ColorsLoaded = false;
+            this.Player4PaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Player4PaletteVisualizer.Location = new System.Drawing.Point(3, 3);
+            this.Player4PaletteVisualizer.Name = "Player4PaletteVisualizer";
+            this.Player4PaletteVisualizer.Size = new System.Drawing.Size(566, 99);
+            this.Player4PaletteVisualizer.TabIndex = 0;
+            // 
             // Player1PaletteTab
             // 
             this.Player1PaletteTab.Controls.Add(this.Player1PaletteVisualizer);
@@ -174,6 +210,15 @@
             this.Player1PaletteTab.TabIndex = 4;
             this.Player1PaletteTab.Text = "Player1 link arena";
             this.Player1PaletteTab.UseVisualStyleBackColor = true;
+            // 
+            // Player1PaletteVisualizer
+            // 
+            this.Player1PaletteVisualizer.ColorsLoaded = false;
+            this.Player1PaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Player1PaletteVisualizer.Location = new System.Drawing.Point(3, 3);
+            this.Player1PaletteVisualizer.Name = "Player1PaletteVisualizer";
+            this.Player1PaletteVisualizer.Size = new System.Drawing.Size(566, 99);
+            this.Player1PaletteVisualizer.TabIndex = 0;
             // 
             // ClipboardImporter
             // 
@@ -330,6 +375,17 @@
             this.ClipboardGroupBox.TabStop = false;
             this.ClipboardGroupBox.Text = "Clipboard";
             // 
+            // exportExtractedIndexButton
+            // 
+            this.exportExtractedIndexButton.Enabled = false;
+            this.exportExtractedIndexButton.Location = new System.Drawing.Point(6, 82);
+            this.exportExtractedIndexButton.Name = "exportExtractedIndexButton";
+            this.exportExtractedIndexButton.Size = new System.Drawing.Size(121, 23);
+            this.exportExtractedIndexButton.TabIndex = 2;
+            this.exportExtractedIndexButton.Text = "Export extracted index";
+            this.exportExtractedIndexButton.UseVisualStyleBackColor = true;
+            this.exportExtractedIndexButton.Click += new System.EventHandler(this.ExportExtractedIndexButton_Click);
+            // 
             // ResetGroupBox
             // 
             this.ResetGroupBox.Controls.Add(this.ResetCurrentPalette);
@@ -385,8 +441,6 @@
             // PaletteEntrySelector
             // 
             this.PaletteEntrySelector.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.PaletteEntrySelector.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.PaletteEntrySelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PaletteEntrySelector.FormattingEnabled = true;
             this.PaletteEntrySelector.Location = new System.Drawing.Point(9, 18);
             this.PaletteEntrySelector.Name = "PaletteEntrySelector";
@@ -535,6 +589,15 @@
             this.extractedPlayerTab.Text = "Player";
             this.extractedPlayerTab.UseVisualStyleBackColor = true;
             // 
+            // extractedPlayerVisu
+            // 
+            this.extractedPlayerVisu.ColorsLoaded = false;
+            this.extractedPlayerVisu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.extractedPlayerVisu.Location = new System.Drawing.Point(3, 3);
+            this.extractedPlayerVisu.Name = "extractedPlayerVisu";
+            this.extractedPlayerVisu.Size = new System.Drawing.Size(566, 99);
+            this.extractedPlayerVisu.TabIndex = 0;
+            // 
             // extractedEnemyTab
             // 
             this.extractedEnemyTab.Controls.Add(this.extractedEnemyVisu);
@@ -545,6 +608,15 @@
             this.extractedEnemyTab.TabIndex = 1;
             this.extractedEnemyTab.Text = "Enemy";
             this.extractedEnemyTab.UseVisualStyleBackColor = true;
+            // 
+            // extractedEnemyVisu
+            // 
+            this.extractedEnemyVisu.ColorsLoaded = false;
+            this.extractedEnemyVisu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.extractedEnemyVisu.Location = new System.Drawing.Point(3, 3);
+            this.extractedEnemyVisu.Name = "extractedEnemyVisu";
+            this.extractedEnemyVisu.Size = new System.Drawing.Size(566, 99);
+            this.extractedEnemyVisu.TabIndex = 0;
             // 
             // extractedNpcTab
             // 
@@ -557,6 +629,15 @@
             this.extractedNpcTab.Text = "NPC";
             this.extractedNpcTab.UseVisualStyleBackColor = true;
             // 
+            // extractedNpcVisu
+            // 
+            this.extractedNpcVisu.ColorsLoaded = false;
+            this.extractedNpcVisu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.extractedNpcVisu.Location = new System.Drawing.Point(3, 3);
+            this.extractedNpcVisu.Name = "extractedNpcVisu";
+            this.extractedNpcVisu.Size = new System.Drawing.Size(566, 99);
+            this.extractedNpcVisu.TabIndex = 0;
+            // 
             // extractedPlayer4LATab
             // 
             this.extractedPlayer4LATab.Controls.Add(this.extractedPlayer4LAVisu);
@@ -568,6 +649,15 @@
             this.extractedPlayer4LATab.Text = "Player4 link arena";
             this.extractedPlayer4LATab.UseVisualStyleBackColor = true;
             // 
+            // extractedPlayer4LAVisu
+            // 
+            this.extractedPlayer4LAVisu.ColorsLoaded = false;
+            this.extractedPlayer4LAVisu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.extractedPlayer4LAVisu.Location = new System.Drawing.Point(3, 3);
+            this.extractedPlayer4LAVisu.Name = "extractedPlayer4LAVisu";
+            this.extractedPlayer4LAVisu.Size = new System.Drawing.Size(566, 99);
+            this.extractedPlayer4LAVisu.TabIndex = 0;
+            // 
             // extractedPlayer1LATab
             // 
             this.extractedPlayer1LATab.Controls.Add(this.extractedPlayer1LAVisu);
@@ -578,98 +668,6 @@
             this.extractedPlayer1LATab.TabIndex = 4;
             this.extractedPlayer1LATab.Text = "Player1 link arena";
             this.extractedPlayer1LATab.UseVisualStyleBackColor = true;
-            // 
-            // exportExtractedIndexButton
-            // 
-            this.exportExtractedIndexButton.Enabled = false;
-            this.exportExtractedIndexButton.Location = new System.Drawing.Point(6, 82);
-            this.exportExtractedIndexButton.Name = "exportExtractedIndexButton";
-            this.exportExtractedIndexButton.Size = new System.Drawing.Size(121, 23);
-            this.exportExtractedIndexButton.TabIndex = 2;
-            this.exportExtractedIndexButton.Text = "Export extracted index";
-            this.exportExtractedIndexButton.UseVisualStyleBackColor = true;
-            this.exportExtractedIndexButton.Click += new System.EventHandler(this.ExportExtractedIndexButton_Click);
-            // 
-            // PlayerPaletteVisualizer
-            // 
-            this.PlayerPaletteVisualizer.ColorsLoaded = false;
-            this.PlayerPaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PlayerPaletteVisualizer.Location = new System.Drawing.Point(3, 3);
-            this.PlayerPaletteVisualizer.Name = "PlayerPaletteVisualizer";
-            this.PlayerPaletteVisualizer.Size = new System.Drawing.Size(566, 99);
-            this.PlayerPaletteVisualizer.TabIndex = 0;
-            // 
-            // EnemyPaletteVisualizer
-            // 
-            this.EnemyPaletteVisualizer.ColorsLoaded = false;
-            this.EnemyPaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EnemyPaletteVisualizer.Location = new System.Drawing.Point(3, 3);
-            this.EnemyPaletteVisualizer.Name = "EnemyPaletteVisualizer";
-            this.EnemyPaletteVisualizer.Size = new System.Drawing.Size(566, 99);
-            this.EnemyPaletteVisualizer.TabIndex = 0;
-            // 
-            // NPCPaletteVisualizer
-            // 
-            this.NPCPaletteVisualizer.ColorsLoaded = false;
-            this.NPCPaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NPCPaletteVisualizer.Location = new System.Drawing.Point(3, 3);
-            this.NPCPaletteVisualizer.Name = "NPCPaletteVisualizer";
-            this.NPCPaletteVisualizer.Size = new System.Drawing.Size(566, 99);
-            this.NPCPaletteVisualizer.TabIndex = 0;
-            // 
-            // Player4PaletteVisualizer
-            // 
-            this.Player4PaletteVisualizer.ColorsLoaded = false;
-            this.Player4PaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Player4PaletteVisualizer.Location = new System.Drawing.Point(3, 3);
-            this.Player4PaletteVisualizer.Name = "Player4PaletteVisualizer";
-            this.Player4PaletteVisualizer.Size = new System.Drawing.Size(566, 99);
-            this.Player4PaletteVisualizer.TabIndex = 0;
-            // 
-            // Player1PaletteVisualizer
-            // 
-            this.Player1PaletteVisualizer.ColorsLoaded = false;
-            this.Player1PaletteVisualizer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Player1PaletteVisualizer.Location = new System.Drawing.Point(3, 3);
-            this.Player1PaletteVisualizer.Name = "Player1PaletteVisualizer";
-            this.Player1PaletteVisualizer.Size = new System.Drawing.Size(566, 99);
-            this.Player1PaletteVisualizer.TabIndex = 0;
-            // 
-            // extractedPlayerVisu
-            // 
-            this.extractedPlayerVisu.ColorsLoaded = false;
-            this.extractedPlayerVisu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.extractedPlayerVisu.Location = new System.Drawing.Point(3, 3);
-            this.extractedPlayerVisu.Name = "extractedPlayerVisu";
-            this.extractedPlayerVisu.Size = new System.Drawing.Size(566, 99);
-            this.extractedPlayerVisu.TabIndex = 0;
-            // 
-            // extractedEnemyVisu
-            // 
-            this.extractedEnemyVisu.ColorsLoaded = false;
-            this.extractedEnemyVisu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.extractedEnemyVisu.Location = new System.Drawing.Point(3, 3);
-            this.extractedEnemyVisu.Name = "extractedEnemyVisu";
-            this.extractedEnemyVisu.Size = new System.Drawing.Size(566, 99);
-            this.extractedEnemyVisu.TabIndex = 0;
-            // 
-            // extractedNpcVisu
-            // 
-            this.extractedNpcVisu.ColorsLoaded = false;
-            this.extractedNpcVisu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.extractedNpcVisu.Location = new System.Drawing.Point(3, 3);
-            this.extractedNpcVisu.Name = "extractedNpcVisu";
-            this.extractedNpcVisu.Size = new System.Drawing.Size(566, 99);
-            this.extractedNpcVisu.TabIndex = 0;
-            // 
-            // extractedPlayer4LAVisu
-            // 
-            this.extractedPlayer4LAVisu.ColorsLoaded = false;
-            this.extractedPlayer4LAVisu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.extractedPlayer4LAVisu.Location = new System.Drawing.Point(3, 3);
-            this.extractedPlayer4LAVisu.Name = "extractedPlayer4LAVisu";
-            this.extractedPlayer4LAVisu.Size = new System.Drawing.Size(566, 99);
-            this.extractedPlayer4LAVisu.TabIndex = 0;
             // 
             // extractedPlayer1LAVisu
             // 

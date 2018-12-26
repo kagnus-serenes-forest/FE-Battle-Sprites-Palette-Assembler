@@ -23,17 +23,17 @@ namespace BSPaletteAssembler
             Application.Run(new BSPaletteAssemblerForm());
         }
 
-        public static Color[] ToColors(Byte[] palette)
+        public static Color[] PaletteToColors(byte[] palette)
         {
             return GBAPalette.ToPalette(palette, 0, palette.Length >> 1);
         }
 
-        public static Byte[] FromColors(Color[] palette)
+        public static byte[] PaletteFromColors(Color[] palette)
         {
             return GBAPalette.toRawGBAPalette(palette);
         }
 
-        public static Byte[] Compress(Byte[] data)
+        public static byte[] Compress(byte[] data)
         {
             return Nintenlord.ROMHacking.GBA.Compressions.LZ77.Compress(data);
         }

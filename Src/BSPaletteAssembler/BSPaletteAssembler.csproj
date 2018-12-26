@@ -129,6 +129,7 @@
     <Compile Include="GameProfileLoader.cs" />
     <Compile Include="InvalidGameException.cs" />
     <Compile Include="NoROMException.cs" />
+    <Compile Include="PaletteIndexAutoCompleteBehavior.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepointingForm.cs">

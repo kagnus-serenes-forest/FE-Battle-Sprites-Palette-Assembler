@@ -1,0 +1,5 @@
+[X]  Make the palette index selector searchable
+[ ]  Allow custom lists
+[ ]  Auto-detect ROM Game (FE6,FE7,FE8)
+[ ]  Auto-detect Palette Table Repointing
+[ ]  Add Length Check

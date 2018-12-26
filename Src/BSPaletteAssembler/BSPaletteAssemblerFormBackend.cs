@@ -77,7 +77,7 @@ namespace BSPaletteAssembler
             }
         }
 
-        public Byte[] CompressPalette()
+        public byte[] CompressPalette()
         {
             int loadedPalettesCount = 0;
             BSPaletteVisualizer paletteViewer = CheckPalettesInput(ref loadedPalettesCount);
@@ -104,7 +104,7 @@ namespace BSPaletteAssembler
                     allPalettes.AddRange(defaultPalette);
                 }
             }
-            var data = Program.FromColors(allPalettes.ToArray());
+            var data = Program.PaletteFromColors(allPalettes.ToArray());
             return Program.Compress(data);
         }
         #endregion
@@ -124,7 +124,7 @@ namespace BSPaletteAssembler
                             output.Position = (long)OffsetSelector.Value;
                             output.Write(data, 0, data.Length);
                         }
-                        MsgBoxHelper.Info(String.Format("Wrote data in file {0} at offset 0x{1:X8}", PathTextBox.Text, (int)OffsetSelector.Value));
+                        MsgBoxHelper.Info(string.Format("Wrote data in file {0} at offset 0x{1:X8}", PathTextBox.Text, (int)OffsetSelector.Value));
                     }
                     catch (Exception ex)
                     {
@@ -140,18 +140,18 @@ namespace BSPaletteAssembler
         #endregion
 
         #region Change Palette List
-        public void ChangePaletteList(String GameName)
+        public void ChangePaletteList(string GameName)
         {
-            PaletteEntrySelector.DataSource = LoadPaletteList(GameName);
+            paletteIndexAutoCompleteBehavior.ChangeList(LoadPaletteList(GameName));
         }
 
-        public List<String> LoadPaletteList(String GameName)
+        public List<string> LoadPaletteList(string GameName)
         {
-            var ret = new List<String>();
+            var ret = new List<string>();
             try
             {
                 var lines = File.ReadAllLines(GameFileName(GameName));
-                foreach (String line in lines)
+                foreach (string line in lines)
                 {
                     if (line.StartsWith("##FE"))
                     {
@@ -177,7 +177,7 @@ namespace BSPaletteAssembler
             return ret;
         }
 
-        public static String GameFileName(String GameName)
+        public static string GameFileName(string GameName)
         {
             return Application.StartupPath + Path.DirectorySeparatorChar + "Palette_lists" + Path.DirectorySeparatorChar + GameName + "PaletteList.txt";
         }
@@ -192,13 +192,13 @@ namespace BSPaletteAssembler
             SaveROMButton.Enabled = IsAROMCkBx.Checked && mCurrentROM.Opened && mCurrentROM.Edited;
             SaveROMButton.Enabled = IsAROMCkBx.Checked && mCurrentROM.Opened && mCurrentROM.Edited;
             SaveROMButton.Enabled = IsAROMCkBx.Checked && mCurrentROM.Opened && mCurrentROM.Edited;
-            FileSaver.Enabled = OffsetSelector.Enabled = !IsAROMCkBx.Checked && !String.IsNullOrWhiteSpace(PathTextBox.Text);
+            FileSaver.Enabled = OffsetSelector.Enabled = !IsAROMCkBx.Checked && !string.IsNullOrWhiteSpace(PathTextBox.Text);
             exportExtractedIndexButton.Enabled = (ExtractedTab == mTabControl.SelectedTab) && mHasExtracted;
         }
         #endregion
 
         #region Extract Palette As String
-        public String GetExtractedIdx()
+        public string GetExtractedIdx()
         {
             var selectedTab = extractedPaletteTabControl.SelectedTab;
             var visu = GetPaletteVisualizer(selectedTab);
@@ -209,12 +209,12 @@ namespace BSPaletteAssembler
                 l.Add(col.Current);
             }
 
-            return Program.FromColors(l.ToArray()).ToHexString();
+            return Program.PaletteFromColors(l.ToArray()).ToHexString();
         }
         #endregion
 
         #region Palette Replacement
-        public bool ReplaceOldPalette(Byte[] NewPal, int PaletteOffset)
+        public bool ReplaceOldPalette(byte[] NewPal, int PaletteOffset)
         {
             if (mCurrentROM == null)
             {
@@ -236,6 +236,10 @@ namespace BSPaletteAssembler
             if (mCurrentROM.Opened)
             {
                 int palOffset = GetPaletteOffset();
+                if (palOffset == 0)
+                {
+                    return;
+                }
                 byte[] palette = mCurrentROM.DecompressLZ77CompressedData(palOffset);
                 if (palette != null)
                 {
@@ -243,7 +247,7 @@ namespace BSPaletteAssembler
                     {
                         byte[] tmp = new byte[32];
                         Array.Copy(palette, i * 32, tmp, 0, 32);
-                        visualizersArray[i].LoadColors(Program.ToColors(tmp));
+                        visualizers[i].LoadColors(Program.PaletteToColors(tmp));
                     }
                     mTabControl.SelectedTab = ExtractedTab;
                     PaletteEntrySelector.Focus();
@@ -266,7 +270,6 @@ namespace BSPaletteAssembler
             int paletteEntry = PaletteEntrySelector.SelectedIndex;
             if (paletteEntry == 0)
             {
-                MsgBoxHelper.Error("Invalid entry");
                 return 0;
             }
             int gamePaletteTable = GetGamePaletteTable();

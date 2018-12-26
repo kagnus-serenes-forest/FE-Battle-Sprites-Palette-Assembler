@@ -22,16 +22,17 @@ namespace BSPaletteAssembler
             Multiselect = false
         };
 
-        private BSPaletteVisualizer[] visualizersArray;
+        private BSPaletteVisualizer[] visualizers;
         private Dictionary<RadioButton, int> GamePaletteTables;
         private RadioButton CurrentGame;
 
         private BSPaletteVisualizer DefaultPaletteVisualizer;
 
         private Nintenlord.ROMHacking.GBA.GBAROM mCurrentROM = new Nintenlord.ROMHacking.GBA.GBAROM();
-        private static String ofdGBAFilter = "GBA files|*.gba";
-        private static String ofdAllFilter = "All files|*";
+        private static string ofdGBAFilter = "GBA files|*.gba";
+        private static string ofdAllFilter = "All files|*";
         private bool mHasExtracted = false;
+        private PaletteIndexAutoCompleteBehavior paletteIndexAutoCompleteBehavior;
 
         #endregion
 
@@ -40,15 +41,16 @@ namespace BSPaletteAssembler
         {
             InitializeComponent();
             DefaultPaletteVisualizer = PlayerPaletteVisualizer;
-            ChangePaletteList("FE7");
+            paletteIndexAutoCompleteBehavior = new PaletteIndexAutoCompleteBehavior(PaletteEntrySelector);
             CurrentGame = FE7Radio;
+            ChangePaletteList("FE7");
             GamePaletteTables = new Dictionary<RadioButton, int>
             {
                 { FE7Radio, 0xFD8004 },
                 { FE6Radio, 0x7FC004 },
                 { FE8Radio, 0xEF8004 }
             };
-            visualizersArray = new BSPaletteVisualizer[]
+            visualizers = new BSPaletteVisualizer[]
             {
                 extractedPlayerVisu,
                 extractedEnemyVisu,
@@ -71,7 +73,7 @@ namespace BSPaletteAssembler
                 {
                     var data = sdata.ToBytes();
                     var paletteViewer = GetCurrentVisualizer();
-                    var colors = Program.ToColors(data);
+                    var colors = Program.PaletteToColors(data);
                     paletteViewer.LoadColors(colors);
                     mTabControl.SelectedTab = ImportedTab;
                 }
@@ -106,7 +108,7 @@ namespace BSPaletteAssembler
 
         private void ExportExtractedIndexButton_Click(object sender, EventArgs e)
         {
-            String idx;
+            string idx;
             try
             {
                 idx = GetExtractedIdx();
@@ -124,7 +126,7 @@ namespace BSPaletteAssembler
         #region Save Changes Event Handlers
         private void FileSaver_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(PathTextBox.Text))
+            if (!string.IsNullOrWhiteSpace(PathTextBox.Text))
             {
                 var rdonly = OffsetSelector.ReadOnly;
                 OffsetSelector.ReadOnly = true;
@@ -218,8 +220,7 @@ namespace BSPaletteAssembler
 
         private void SelectedGameChanged(object sender, EventArgs e)
         {
-            var Sender = sender as RadioButton;
-            if (Sender != null && Sender.Checked)
+            if (sender is RadioButton Sender && Sender.Checked)
             {
                 CurrentGame = Sender;
                 autoExtractCheckBox.Checked = false;
@@ -393,7 +394,7 @@ namespace BSPaletteAssembler
         //            allPalettes.AddRange(defaultPalette);
         //        }
         //    }
-        //    var data = Program.FromColors(allPalettes.ToArray());
+        //    var data = Program.PaletteFromColors(allPalettes.ToArray());
         //    return Program.Compress(data);
         //}
 
